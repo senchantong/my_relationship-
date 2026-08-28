@@ -1,0 +1,43 @@
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#100b0f;color:#fff;font-family:Montserrat,'Noto Sans Khmer',sans-serif;line-height:1.8}
+header{position:fixed;z-index:20;top:0;width:100%;height:72px;padding:0 7%;display:flex;justify-content:space-between;align-items:center;background:#090609aa;backdrop-filter:blur(10px)}
+.brand{font:32px 'Great Vibes';color:white;text-decoration:none}.brand span,em,.kicker{color:#e4a5b7}
+header button{border:1px solid #ffffff44;background:#ffffff0c;color:#fff;border-radius:30px;padding:9px 15px;cursor:pointer}
+.hero{height:100vh;min-height:650px;position:relative;display:grid;place-items:center;text-align:center;overflow:hidden}
+.bg{position:absolute;inset:0;background:url('./memory-3.jpeg') center/cover;filter:saturate(.75)}
+.veil{position:absolute;inset:0;background:radial-gradient(circle,#0002,#080508e8 78%)}
+.heroText{position:relative;z-index:2;padding:70px 20px}
+.kicker,.title>p{font-size:10px;letter-spacing:4px;font-weight:800}
+.script{font:clamp(55px,9vw,120px) 'Great Vibes'}
+.hero h1{font-size:clamp(44px,7vw,85px);line-height:1;margin:5px 0 25px}
+.hero h1 span{color:#e4a5b7}
+.heroText>a{display:inline-block;margin-top:25px;padding:11px 23px;border:1px solid #ffffff66;border-radius:30px;color:#fff;text-decoration:none;font-size:10px;letter-spacing:2px}
+section{padding:115px 8%;background:#f8f1f2;color:#21181b}.dark{background:#100b0f;color:#fff}
+.title{max-width:800px;margin-bottom:55px}.center{text-align:center;margin-left:auto;margin-right:auto}
+.title h2{font-size:clamp(55px,8vw,100px);line-height:.9;letter-spacing:-4px;margin:10px 0}
+.title em{font:1em 'Great Vibes';font-weight:400;letter-spacing:0}
+.grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.grid>img{width:100%;height:570px;object-fit:cover}.copy{font-size:15px}.num{font:48px 'Great Vibes';color:#d98fa5}.copy h3{font-size:28px}
+.timer{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.timer div{width:145px;height:145px;border:1px solid #ffffff1c;display:grid;place-content:center;text-align:center}
+.timer b{font-size:52px;color:#e4a5b7}.timer small{font-size:9px;letter-spacing:3px;color:#999}.muted{color:#888;font-size:11px}
+.gallery{max-width:1100px;margin:auto;display:grid;grid-template-columns:1fr 1.3fr 1fr;grid-auto-rows:270px;gap:12px}
+.gallery button{padding:0;border:0;overflow:hidden;cursor:pointer}.gallery .big{grid-row:span 2}
+.gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:.5s}.gallery button:hover img{transform:scale(1.06)}
+.letter{max-width:750px;margin:auto;text-align:center;padding:70px 8%;border:1px solid #ffffff16;position:relative}
+.seal{position:absolute;top:-25px;left:50%;transform:translateX(-50%);width:50px;height:50px;border-radius:50%;background:#e4a5b7;color:#150b0f;display:grid;place-items:center}
+.letter h2{font:46px 'Great Vibes'}.letter p:not(.kicker){color:#c9bec2;font-size:14px}.sig{font:36px 'Great Vibes';color:#e4a5b7;margin-top:30px}
+.question{text-align:center}.bigHeart{font-size:75px;color:#d98fa5;animation:pulse 1.4s infinite}
+.question h2{font-size:clamp(55px,8vw,100px);line-height:.85;letter-spacing:-4px}
+.question button{padding:13px 21px;margin:5px;border:1px solid #c9899e;background:#c9899e;color:#fff;font-weight:800;cursor:pointer}
+.question button:last-of-type{background:transparent;color:#8a5263}.question #reply{color:#a4546c;font-weight:700;min-height:30px}
+footer{padding:35px 8%;display:flex;justify-content:space-between;align-items:center;background:#070507;color:#777}
+#box{display:none;position:fixed;z-index:50;inset:0;background:#000e;align-items:center;justify-content:center;padding:5%}
+#box.show{display:flex}#preview{max-width:90%;max-height:88%;object-fit:contain}
+#close{position:absolute;right:25px;top:10px;background:none;border:0;color:#fff;font-size:45px;cursor:pointer}
+.heart{position:fixed;z-index:40;pointer-events:none;color:#e4a5b7;animation:float 3s forwards}
+@keyframes float{from{transform:translateY(0) scale(.5);opacity:0}15%{opacity:1}to{transform:translateY(-180px) scale(1.3);opacity:0}}
+@keyframes pulse{50%{transform:scale(1.12)}}
+@media(max-width:760px){.grid{grid-template-columns:1fr;gap:40px}.grid>img{height:450px}.gallery{grid-template-columns:1fr 1fr;grid-auto-rows:210px}.gallery .big{grid-row:span 1}.title h2{letter-spacing:-2px}.timer div{width:125px;height:125px}.timer b{font-size:43px}}
+@media(max-width:480px){.gallery{grid-template-columns:1fr}.gallery button{height:280px}.letter h2{font-size:39px}footer{flex-direction:column;align-items:flex-start;gap:8px}}
